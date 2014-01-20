@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9473027118877E9F00A1AED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9473027018877E9F00A1AED6 /* Main.storyboard */; };
+		9473027A188791F800A1AED6 /* RJDtempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94730279188791F800A1AED6 /* RJDtempViewController.m */; };
+		947F4C24188D15680084481C /* RJDtempConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 947F4C23188D15680084481C /* RJDtempConversion.m */; };
+		94D5971C1887792F009DAC13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971B1887792F009DAC13 /* Foundation.framework */; };
+		94D5971E1887792F009DAC13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971D1887792F009DAC13 /* CoreGraphics.framework */; };
+		94D597201887792F009DAC13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971F1887792F009DAC13 /* UIKit.framework */; };
+		94D597261887792F009DAC13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94D597241887792F009DAC13 /* InfoPlist.strings */; };
+		94D597281887792F009DAC13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D597271887792F009DAC13 /* main.m */; };
+		94D5972C1887792F009DAC13 /* RJDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D5972B1887792F009DAC13 /* RJDAppDelegate.m */; };
+		94D5972E1887792F009DAC13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D5972D1887792F009DAC13 /* Images.xcassets */; };
+		94D597351887792F009DAC13 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D597341887792F009DAC13 /* XCTest.framework */; };
+		94D597361887792F009DAC13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971B1887792F009DAC13 /* Foundation.framework */; };
+		94D597371887792F009DAC13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971F1887792F009DAC13 /* UIKit.framework */; };
+		94D5973F1887792F009DAC13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94D5973D1887792F009DAC13 /* InfoPlist.strings */; };
+		94D597411887792F009DAC13 /* Metric_ConversionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D597401887792F009DAC13 /* Metric_ConversionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94D597381887792F009DAC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94D597101887792F009DAC13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94D597171887792F009DAC13;
+			remoteInfo = "Metric Conversion";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9473027018877E9F00A1AED6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		94730278188791F800A1AED6 /* RJDtempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDtempViewController.h; sourceTree = "<group>"; };
+		94730279188791F800A1AED6 /* RJDtempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDtempViewController.m; sourceTree = "<group>"; };
+		947F4C22188D15680084481C /* RJDtempConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDtempConversion.h; sourceTree = "<group>"; };
+		947F4C23188D15680084481C /* RJDtempConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDtempConversion.m; sourceTree = "<group>"; };
+		94D597181887792F009DAC13 /* Metric Conversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metric Conversion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D5971B1887792F009DAC13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		94D5971D1887792F009DAC13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		94D5971F1887792F009DAC13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		94D597231887792F009DAC13 /* Metric Conversion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Metric Conversion-Info.plist"; sourceTree = "<group>"; };
+		94D597251887792F009DAC13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94D597271887792F009DAC13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94D597291887792F009DAC13 /* Metric Conversion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Metric Conversion-Prefix.pch"; sourceTree = "<group>"; };
+		94D5972A1887792F009DAC13 /* RJDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJDAppDelegate.h; sourceTree = "<group>"; };
+		94D5972B1887792F009DAC13 /* RJDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJDAppDelegate.m; sourceTree = "<group>"; };
+		94D5972D1887792F009DAC13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		94D597331887792F009DAC13 /* Metric ConversionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Metric ConversionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D597341887792F009DAC13 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		94D5973C1887792F009DAC13 /* Metric ConversionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Metric ConversionTests-Info.plist"; sourceTree = "<group>"; };
+		94D5973E1887792F009DAC13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94D597401887792F009DAC13 /* Metric_ConversionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Metric_ConversionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94D597151887792F009DAC13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D5971E1887792F009DAC13 /* CoreGraphics.framework in Frameworks */,
+				94D597201887792F009DAC13 /* UIKit.framework in Frameworks */,
+				94D5971C1887792F009DAC13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D597301887792F009DAC13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D597351887792F009DAC13 /* XCTest.framework in Frameworks */,
+				94D597371887792F009DAC13 /* UIKit.framework in Frameworks */,
+				94D597361887792F009DAC13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		947F4C21188D154F0084481C /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				947F4C22188D15680084481C /* RJDtempConversion.h */,
+				947F4C23188D15680084481C /* RJDtempConversion.m */,
+			);
+			name = CustomClasses;
+			sourceTree = "<group>";
+		};
+		94C3C0C3188A5AA0001563E1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94730278188791F800A1AED6 /* RJDtempViewController.h */,
+				94730279188791F800A1AED6 /* RJDtempViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		94D5970F1887792F009DAC13 = {
+			isa = PBXGroup;
+			children = (
+				94D597211887792F009DAC13 /* Metric Conversion */,
+				94D5973A1887792F009DAC13 /* Metric ConversionTests */,
+				94D5971A1887792F009DAC13 /* Frameworks */,
+				94D597191887792F009DAC13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94D597191887792F009DAC13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94D597181887792F009DAC13 /* Metric Conversion.app */,
+				94D597331887792F009DAC13 /* Metric ConversionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94D5971A1887792F009DAC13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94D5971B1887792F009DAC13 /* Foundation.framework */,
+				94D5971D1887792F009DAC13 /* CoreGraphics.framework */,
+				94D5971F1887792F009DAC13 /* UIKit.framework */,
+				94D597341887792F009DAC13 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94D597211887792F009DAC13 /* Metric Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				947F4C21188D154F0084481C /* CustomClasses */,
+				94C3C0C3188A5AA0001563E1 /* Controllers */,
+				94D5972A1887792F009DAC13 /* RJDAppDelegate.h */,
+				94D5972B1887792F009DAC13 /* RJDAppDelegate.m */,
+				94D5972D1887792F009DAC13 /* Images.xcassets */,
+				94D597221887792F009DAC13 /* Supporting Files */,
+				9473027018877E9F00A1AED6 /* Main.storyboard */,
+			);
+			path = "Metric Conversion";
+			sourceTree = "<group>";
+		};
+		94D597221887792F009DAC13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94D597231887792F009DAC13 /* Metric Conversion-Info.plist */,
+				94D597241887792F009DAC13 /* InfoPlist.strings */,
+				94D597271887792F009DAC13 /* main.m */,
+				94D597291887792F009DAC13 /* Metric Conversion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94D5973A1887792F009DAC13 /* Metric ConversionTests */ = {
+			isa = PBXGroup;
+			children = (
+				94D597401887792F009DAC13 /* Metric_ConversionTests.m */,
+				94D5973B1887792F009DAC13 /* Supporting Files */,
+			);
+			path = "Metric ConversionTests";
+			sourceTree = "<group>";
+		};
+		94D5973B1887792F009DAC13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94D5973C1887792F009DAC13 /* Metric ConversionTests-Info.plist */,
+				94D5973D1887792F009DAC13 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94D597171887792F009DAC13 /* Metric Conversion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D597441887792F009DAC13 /* Build configuration list for PBXNativeTarget "Metric Conversion" */;
+			buildPhases = (
+				94D597141887792F009DAC13 /* Sources */,
+				94D597151887792F009DAC13 /* Frameworks */,
+				94D597161887792F009DAC13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Metric Conversion";
+			productName = "Metric Conversion";
+			productReference = 94D597181887792F009DAC13 /* Metric Conversion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94D597321887792F009DAC13 /* Metric ConversionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D597471887792F009DAC13 /* Build configuration list for PBXNativeTarget "Metric ConversionTests" */;
+			buildPhases = (
+				94D5972F1887792F009DAC13 /* Sources */,
+				94D597301887792F009DAC13 /* Frameworks */,
+				94D597311887792F009DAC13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94D597391887792F009DAC13 /* PBXTargetDependency */,
+			);
+			name = "Metric ConversionTests";
+			productName = "Metric ConversionTests";
+			productReference = 94D597331887792F009DAC13 /* Metric ConversionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94D597101887792F009DAC13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RJD;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ryan J Dobrynski";
+				TargetAttributes = {
+					94D597321887792F009DAC13 = {
+						TestTargetID = 94D597171887792F009DAC13;
+					};
+				};
+			};
+			buildConfigurationList = 94D597131887792F009DAC13 /* Build configuration list for PBXProject "Metric Conversion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 94D5970F1887792F009DAC13;
+			productRefGroup = 94D597191887792F009DAC13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94D597171887792F009DAC13 /* Metric Conversion */,
+				94D597321887792F009DAC13 /* Metric ConversionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94D597161887792F009DAC13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9473027118877E9F00A1AED6 /* Main.storyboard in Resources */,
+				94D597261887792F009DAC13 /* InfoPlist.strings in Resources */,
+				94D5972E1887792F009DAC13 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D597311887792F009DAC13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D5973F1887792F009DAC13 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94D597141887792F009DAC13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D597281887792F009DAC13 /* main.m in Sources */,
+				9473027A188791F800A1AED6 /* RJDtempViewController.m in Sources */,
+				947F4C24188D15680084481C /* RJDtempConversion.m in Sources */,
+				94D5972C1887792F009DAC13 /* RJDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D5972F1887792F009DAC13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D597411887792F009DAC13 /* Metric_ConversionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94D597391887792F009DAC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94D597171887792F009DAC13 /* Metric Conversion */;
+			targetProxy = 94D597381887792F009DAC13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94D597241887792F009DAC13 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94D597251887792F009DAC13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		94D5973D1887792F009DAC13 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94D5973E1887792F009DAC13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94D597421887792F009DAC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		94D597431887792F009DAC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94D597451887792F009DAC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Metric Conversion/Metric Conversion-Prefix.pch";
+				INFOPLIST_FILE = "Metric Conversion/Metric Conversion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		94D597461887792F009DAC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Metric Conversion/Metric Conversion-Prefix.pch";
+				INFOPLIST_FILE = "Metric Conversion/Metric Conversion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		94D597481887792F009DAC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Metric Conversion.app/Metric Conversion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Metric Conversion/Metric Conversion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Metric ConversionTests/Metric ConversionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		94D597491887792F009DAC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Metric Conversion.app/Metric Conversion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Metric Conversion/Metric Conversion-Prefix.pch";
+				INFOPLIST_FILE = "Metric ConversionTests/Metric ConversionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94D597131887792F009DAC13 /* Build configuration list for PBXProject "Metric Conversion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D597421887792F009DAC13 /* Debug */,
+				94D597431887792F009DAC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D597441887792F009DAC13 /* Build configuration list for PBXNativeTarget "Metric Conversion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D597451887792F009DAC13 /* Debug */,
+				94D597461887792F009DAC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D597471887792F009DAC13 /* Build configuration list for PBXNativeTarget "Metric ConversionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D597481887792F009DAC13 /* Debug */,
+				94D597491887792F009DAC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94D597101887792F009DAC13 /* Project object */;
+}
