@@ -57,7 +57,7 @@
         _RJDtempResults.text = @"";
     
     } else {
-        NSLog(@"User Input with Neither Empty nor populated.. spooky.");
+        NSLog(@"User input with neither empty nor populated.. Spooky.");
     
     }
 
