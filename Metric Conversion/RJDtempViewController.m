@@ -7,7 +7,7 @@
 //
 
 #import "RJDTempViewController.h"
-
+#import "RJDtempConversion.h"
 
 
 @interface RJDtempViewController ()
@@ -23,10 +23,7 @@
 @end
 
 
-
 @implementation RJDtempViewController
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,52 +47,28 @@
 }
 
 
-
-// converts user input to int, converts to other temp and pushes result to screen
 - (IBAction)RJDtempConvert:(id)sender
 {
-    //converts input to int.
-    if ([_RJDtempUserInput.text length] > 0) {
-        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-        NSNumber *tempUnsignedInt;
-        NSNumber *tempSignedInt;
-        switch (_RJDtempPosNegSelector.selectedSegmentIndex)
-        {
-            case 0:
-                tempUnsignedInt = [numberFormatter numberFromString:_RJDtempUserInput.text];
-                tempSignedInt = tempUnsignedInt;
-                break;
-                
-            case 1:
-                tempUnsignedInt = [numberFormatter numberFromString:_RJDtempUserInput.text];
-                tempSignedInt = @(tempUnsignedInt.intValue - (tempUnsignedInt.intValue * 2));
-                break;
-        }
-        
-        //calculates temp translation and pushes to screen
-        NSNumber *mathNumber;
-        switch (_RJDtempFcSelector.selectedSegmentIndex)
-        {
-            case 0:
-                mathNumber = @((tempSignedInt.intValue -32)* 5 / 9 );
-                _RJDtempResults.text = [[[NSString alloc] initWithString:[mathNumber description]] stringByAppendingString:@" C"];
-                break;
-    
-            case 1:
-                mathNumber = @(tempSignedInt.intValue * 9 / 5 + 32 );
-                _RJDtempResults.text = [[[NSString alloc] initWithString:[mathNumber description]] stringByAppendingString:@" F"];
-                break;
-        }
-    }else if ([_RJDtempUserInput.text length] == 0) {
-        _RJDtempResults.text = @"";
-    }
-}
 
+    if ([_RJDtempUserInput.text length] > 0) {
+        _RJDtempResults.text = [RJDtempConversion logger:_RJDtempFcSelector.selectedSegmentIndex withArg2:_RJDtempPosNegSelector.selectedSegmentIndex withArg3:_RJDtempUserInput.text];
+    
+    } else if ([_RJDtempUserInput.text length] == 0) {
+        _RJDtempResults.text = @"";
+    
+    } else {
+        NSLog(@"User Input with Neither Empty nor populated.. spooky.");
+    
+    }
+
+}
 
 
 - (IBAction)RJDtempEditClose:(id)sender
 {
+
     [self.view endEditing:YES];
+
 }
 
 
