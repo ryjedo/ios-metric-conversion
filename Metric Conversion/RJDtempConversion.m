@@ -41,7 +41,8 @@
                                                                                     raiseOnOverflow:(NO)
                                                                                    raiseOnUnderflow:(NO)
                                                                                 raiseOnDivideByZero:(NO)];
-    //check for F or C selection.
+    
+    //check for F or C selection and convert temp.
     switch (tempFcSelector)
     {
     

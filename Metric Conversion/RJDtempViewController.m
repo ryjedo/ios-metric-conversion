@@ -50,7 +50,8 @@
 - (IBAction)RJDtempConvert:(id)sender
 {
 
-    if ([_RJDtempUserInput.text length] > 0 && [[NSScanner scannerWithString:[_RJDtempUserInput text]] scanUnsignedLongLong:NULL]) {
+    if ([_RJDtempUserInput.text length] > 0 && [[NSScanner scannerWithString:[_RJDtempUserInput text]] scanUnsignedLongLong:NULL])
+    {
         _RJDtempResults.text = [RJDtempConversion RJDconvertTemp:_RJDtempFcSelector.selectedSegmentIndex
                                                         withArg2:_RJDtempPosNegSelector.selectedSegmentIndex
                                                         withArg3:_RJDtempUserInput.text];
