@@ -50,14 +50,13 @@
 - (IBAction)RJDtempConvert:(id)sender
 {
 
-    if ([_RJDtempUserInput.text length] > 0) {
-        _RJDtempResults.text = [RJDtempConversion logger:_RJDtempFcSelector.selectedSegmentIndex withArg2:_RJDtempPosNegSelector.selectedSegmentIndex withArg3:_RJDtempUserInput.text];
-    
-    } else if ([_RJDtempUserInput.text length] == 0) {
-        _RJDtempResults.text = @"";
+    if ([_RJDtempUserInput.text length] > 0 && [[NSScanner scannerWithString:[_RJDtempUserInput text]] scanUnsignedLongLong:NULL]) {
+        _RJDtempResults.text = [RJDtempConversion RJDconvertTemp:_RJDtempFcSelector.selectedSegmentIndex
+                                                        withArg2:_RJDtempPosNegSelector.selectedSegmentIndex
+                                                        withArg3:_RJDtempUserInput.text];
     
     } else {
-        NSLog(@"User input was neither empty nor populated.. Spooky.");
+        _RJDtempResults.text = @"";
     
     }
 

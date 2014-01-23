@@ -10,49 +10,57 @@
 
 @implementation RJDtempConversion
 
-+ (NSString *)logger:(long)tempFcSelector withArg2:(long)tempPosNegSelector withArg3:(NSString *)tempUserInput
++ (NSString *)RJDconvertTemp:(long)tempFcSelector withArg2:(long)tempPosNegSelector withArg3:(NSString *)tempUserInput
 {
     
     //declare numbers to be used for conversion process.
-    NSDecimalNumber *tempUnsignedNumber;
-    NSDecimalNumber *tempDoubleUnsignedNumber;
     NSDecimalNumber *tempSignedNumber;
     
     //check for Positive or Negative number.
     switch (tempPosNegSelector)
     {
+      
         case 0:
-            tempUnsignedNumber = [[NSDecimalNumber alloc] initWithString:tempUserInput];
-            tempSignedNumber = tempUnsignedNumber;
+            tempSignedNumber = [[NSDecimalNumber alloc] initWithString:tempUserInput];
             break;
             
         case 1:
-            tempUnsignedNumber = [[NSDecimalNumber alloc] initWithString:tempUserInput];
-            tempDoubleUnsignedNumber = [[NSDecimalNumber alloc] decimalNumberByAdding:tempUnsignedNumber];
-            tempSignedNumber = [[NSDecimalNumber alloc] decimalNumberBySubtracting:tempDoubleUnsignedNumber];
+            tempSignedNumber = [[NSDecimalNumber alloc] decimalNumberBySubtracting:[[NSDecimalNumber alloc] initWithString:tempUserInput]];
             break;
     
     }
    
     //declare NSObjects to be used for results
-    NSDecimalNumber *tempResultsNumber;
     NSString *tempResultsString;
     NSDecimalNumber *tempThirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
     NSDecimalNumber *tempNine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
     NSDecimalNumber *tempFive = [[NSDecimalNumber alloc] initWithString:@"5.0"];
-    
+    NSDecimalNumberHandler *RJDnumberHandler = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                              scale:(0)
+                                                                                   raiseOnExactness:(NO)
+                                                                                    raiseOnOverflow:(NO)
+                                                                                   raiseOnUnderflow:(NO)
+                                                                                raiseOnDivideByZero:(NO)];
     //check for F or C selection.
     switch (tempFcSelector)
     {
     
         case 0:
-            tempResultsNumber = [[[[NSDecimalNumber alloc] decimalNumberBySubtracting:tempThirtyTwo] decimalNumberByMultiplyingBy:tempFive] decimalNumberByDividingBy:tempNine];
-            tempResultsString = [[[NSString alloc] initWithString:[tempResultsNumber description]] stringByAppendingString:@" C"];
+            tempResultsString = [[[NSString alloc] initWithString:[[[[[tempSignedNumber decimalNumberBySubtracting:tempThirtyTwo]
+                                                                                        decimalNumberByMultiplyingBy:tempFive]
+                                                                                        decimalNumberByDividingBy:tempNine]
+                                                                                        decimalNumberByRoundingAccordingToBehavior:RJDnumberHandler]
+                                                                                        description]]
+                                                                                        stringByAppendingString:@" C"];
             break;
 
         case 1:
-            tempResultsNumber = [[[[NSDecimalNumber alloc] decimalNumberByMultiplyingBy:tempNine] decimalNumberByDividingBy:tempFive] decimalNumberByAdding:tempThirtyTwo];
-            tempResultsString = [[[NSString alloc] initWithString:[tempResultsNumber description]] stringByAppendingString:@" F"];
+            tempResultsString = [[[NSString alloc] initWithString:[[[[[tempSignedNumber decimalNumberByMultiplyingBy:tempNine]
+                                                                                        decimalNumberByDividingBy:tempFive]
+                                                                                        decimalNumberByAdding:tempThirtyTwo]
+                                                                                        decimalNumberByRoundingAccordingToBehavior:RJDnumberHandler]
+                                                                                        description]]
+                                                                                        stringByAppendingString:@" F"];
             break;
     
     }
@@ -63,3 +71,5 @@
 
 
 @end
+
+

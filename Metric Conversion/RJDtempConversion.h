@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface RJDtempConversion : NSObject
-+ (NSString *)logger:(long)tempFcSelector withArg2:(long)tempPosNegSelector withArg3:(NSString *)tempUserInput;
++ (NSString *)RJDconvertTemp:(long)tempFcSelector withArg2:(long)tempPosNegSelector withArg3:(NSString *)tempUserInput;
 @end
