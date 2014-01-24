@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Dtemp View Controller - Temp-->
+        <!--Dtemperature View Controller - Temp-->
         <scene sceneID="oKb-2A-Mt1">
             <objects>
-                <viewController id="vx7-HU-0MN" customClass="RJDtempViewController" sceneMemberID="viewController">
+                <viewController id="vx7-HU-0MN" customClass="RJDtemperatureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kbj-3V-XBJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ykt-Ws-lC6"/>
@@ -31,7 +31,7 @@
                                     <segment title="C"/>
                                 </segments>
                                 <connections>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="valueChanged" id="4Id-hO-jjZ"/>
+                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="valueChanged" id="Ofw-51-xyk"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-Wk-KsW">
@@ -42,8 +42,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="editingChanged" id="6GE-Sb-Vdo"/>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="valueChanged" id="aby-mF-UbI"/>
+                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="QFE-GA-OIR"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-rc-LnZ">
@@ -53,7 +52,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="RJDtempEditClose:" destination="vx7-HU-0MN" eventType="touchUpInside" id="oxR-PL-PZe"/>
+                                    <action selector="stopEditing:" destination="vx7-HU-0MN" eventType="touchUpInside" id="oE6-aq-bLo"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tUr-f4-KWi">
@@ -64,7 +63,7 @@
                                     <segment title="-"/>
                                 </segments>
                                 <connections>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="valueChanged" id="clq-01-S30"/>
+                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="valueChanged" id="8nJ-7e-gnC"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -76,15 +75,15 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="qkw-Bg-gEU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="RJDtempFcSelector" destination="qQu-42-Pq4" id="pNs-n9-G7e"/>
-                        <outlet property="RJDtempPosNegSelector" destination="tUr-f4-KWi" id="Q86-fO-GzN"/>
-                        <outlet property="RJDtempResults" destination="mb5-GS-SVV" id="kUp-1G-Rv5"/>
-                        <outlet property="RJDtempUserInput" destination="l7l-Wk-KsW" id="2uf-9j-2bY"/>
+                        <outlet property="displayResult" destination="mb5-GS-SVV" id="lhy-uM-fYd"/>
+                        <outlet property="fahrenheitCelsiusSelector" destination="qQu-42-Pq4" id="2sH-S4-cK3"/>
+                        <outlet property="positiveNegativeSelector" destination="tUr-f4-KWi" id="YuR-U2-mbY"/>
+                        <outlet property="userInput" destination="l7l-Wk-KsW" id="0DF-ZM-yjG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ago-vD-EBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="54"/>
+            <point key="canvasLocation" x="32" y="178"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

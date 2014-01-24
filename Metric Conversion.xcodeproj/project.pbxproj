@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940E649B18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E649A18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m */; };
 		9473027118877E9F00A1AED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9473027018877E9F00A1AED6 /* Main.storyboard */; };
-		9473027A188791F800A1AED6 /* RJDtempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94730279188791F800A1AED6 /* RJDtempViewController.m */; };
-		947F4C24188D15680084481C /* RJDtempConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 947F4C23188D15680084481C /* RJDtempConversion.m */; };
+		9473027A188791F800A1AED6 /* RJDtemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94730279188791F800A1AED6 /* RJDtemperatureViewController.m */; };
 		94D5971C1887792F009DAC13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971B1887792F009DAC13 /* Foundation.framework */; };
 		94D5971E1887792F009DAC13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971D1887792F009DAC13 /* CoreGraphics.framework */; };
 		94D597201887792F009DAC13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971F1887792F009DAC13 /* UIKit.framework */; };
@@ -35,11 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940E649918920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RJDtemperatureViewController+convertTemperature.h"; sourceTree = "<group>"; };
+		940E649A18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RJDtemperatureViewController+convertTemperature.m"; sourceTree = "<group>"; };
 		9473027018877E9F00A1AED6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		94730278188791F800A1AED6 /* RJDtempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDtempViewController.h; sourceTree = "<group>"; };
-		94730279188791F800A1AED6 /* RJDtempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDtempViewController.m; sourceTree = "<group>"; };
-		947F4C22188D15680084481C /* RJDtempConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDtempConversion.h; sourceTree = "<group>"; };
-		947F4C23188D15680084481C /* RJDtempConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDtempConversion.m; sourceTree = "<group>"; };
+		94730278188791F800A1AED6 /* RJDtemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDtemperatureViewController.h; sourceTree = "<group>"; };
+		94730279188791F800A1AED6 /* RJDtemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDtemperatureViewController.m; sourceTree = "<group>"; };
 		94D597181887792F009DAC13 /* Metric Conversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metric Conversion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D5971B1887792F009DAC13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D5971D1887792F009DAC13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,20 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		947F4C21188D154F0084481C /* CustomClasses */ = {
+		947F4C21188D154F0084481C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				947F4C22188D15680084481C /* RJDtempConversion.h */,
-				947F4C23188D15680084481C /* RJDtempConversion.m */,
+				940E649918920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.h */,
+				940E649A18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m */,
 			);
-			name = CustomClasses;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		94C3C0C3188A5AA0001563E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				94730278188791F800A1AED6 /* RJDtempViewController.h */,
-				94730279188791F800A1AED6 /* RJDtempViewController.m */,
+				94730278188791F800A1AED6 /* RJDtemperatureViewController.h */,
+				94730279188791F800A1AED6 /* RJDtemperatureViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 		94D597211887792F009DAC13 /* Metric Conversion */ = {
 			isa = PBXGroup;
 			children = (
-				947F4C21188D154F0084481C /* CustomClasses */,
+				947F4C21188D154F0084481C /* Categories */,
 				94C3C0C3188A5AA0001563E1 /* Controllers */,
 				94D5972A1887792F009DAC13 /* RJDAppDelegate.h */,
 				94D5972B1887792F009DAC13 /* RJDAppDelegate.m */,
@@ -271,8 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D597281887792F009DAC13 /* main.m in Sources */,
-				9473027A188791F800A1AED6 /* RJDtempViewController.m in Sources */,
-				947F4C24188D15680084481C /* RJDtempConversion.m in Sources */,
+				940E649B18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m in Sources */,
+				9473027A188791F800A1AED6 /* RJDtemperatureViewController.m in Sources */,
 				94D5972C1887792F009DAC13 /* RJDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
