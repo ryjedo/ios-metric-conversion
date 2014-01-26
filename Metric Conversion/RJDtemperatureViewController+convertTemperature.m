@@ -22,7 +22,7 @@
     {
             
         case 0: // input is a positive number
-            signedNumber = [NSDecimalNumber decimalNumberWithString:userInputData];
+            signedNumber = [[NSDecimalNumber alloc] initWithString:userInputData];
             break;
             
         case 1: // input is a negative number
@@ -35,9 +35,9 @@
     
     //declare NSObjects to be used for conversion math and results
     NSString *convertedTemperature;
-    NSDecimalNumber *thirtyTwo = [NSDecimalNumber decimalNumberWithString:@"32.0"];
-    NSDecimalNumber *nine = [NSDecimalNumber decimalNumberWithString:@"9.0"];
-    NSDecimalNumber *five = [NSDecimalNumber decimalNumberWithString:@"5.0"];
+    NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
+    NSDecimalNumber *nine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
+    NSDecimalNumber *five = [[NSDecimalNumber alloc] initWithString:@"5.0"];
     NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
                                                                                                 scale:(0)
                                                                                      raiseOnExactness:(NO)
