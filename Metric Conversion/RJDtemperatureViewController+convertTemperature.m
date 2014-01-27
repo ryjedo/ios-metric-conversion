@@ -9,10 +9,128 @@
 #import "RJDtemperatureViewController+convertTemperature.h"
 
 @implementation RJDtemperatureViewController (convertTemperature)
+
+- (NSString *)convertTemperature:(NSString *)userInputData
+                        withArg2:(long)fromUnitType
+                        withArg3:(long)toUnitType
+{
+    //Declare objects
+    NSDecimalNumber *signedNumber = [[NSDecimalNumber alloc] initWithString:userInputData];
+    NSString *convertedTemperature;
+    NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
+    NSDecimalNumber *nine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
+    NSDecimalNumber *five = [[NSDecimalNumber alloc] initWithString:@"5.0"];
+    NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
+
+    
+    
+    //Check which input field sent the data.
+    switch (fromUnitType) {
+
+            
+
+            
+            
+        //input is Kelvin
+        case 1:
+            
+            //check output type
+            switch (toUnitType) {
+                
+                //Kelvin to Fahrenheit
+                case 1:
+                    convertedTemperature = @"1F";
+                    break;
+
+                //Kelvin to Celsius
+                case 2:
+                    convertedTemperature = @"1C";
+                    break;
+            }
+            
+            break;
+            
+            
+        
+            
+            
+        //input is Fahrenheit
+        case 2:
+            
+            //check output type
+            switch (toUnitType) {
+                    
+                //Fahrenheit to Kelvin
+                case 1:
+                    convertedTemperature = @"1K";
+                    break;
+                    
+                //Fahrenheit to Celsius
+                case 2:
+                    convertedTemperature = [[[NSString alloc] initWithString:[[[[[signedNumber  decimalNumberBySubtracting:thirtyTwo]
+                                                                                                decimalNumberByMultiplyingBy:five]
+                                                                                                decimalNumberByDividingBy:nine]
+                                                                                                decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
+                                                                                                description]]
+                                                                                                stringByAppendingString:@" C"];
+                    break;
+            }
+            
+            break;
+            
+
+            
+            
+            
+        //input is Celsius
+        case 3:
+            
+            //check output type
+            switch (toUnitType) {
+
+                //Celsius to Kelvin
+                case 1:
+                    convertedTemperature = @"1K";
+                    break;
+                    
+                //Celsius to Fahrenheit
+                case 2:
+                    convertedTemperature = [[[NSString alloc] initWithString:[[[[[signedNumber  decimalNumberByMultiplyingBy:nine]
+                                                                                                decimalNumberByDividingBy:five]
+                                                                                                decimalNumberByAdding:thirtyTwo]
+                                                                                                decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
+                                                                                                description]]
+                                                                                                stringByAppendingString:@" F"];;
+                    break;
+            }
+            
+            break;
+        
+
+            
+            
+            
+        //input is Unknown
+        default:
+            convertedTemperature = @"";
+            break;
+    }
+    
+    return(convertedTemperature);
+}
+
+/*
 - (NSString *)convertTemperature:(long)fahrenheitCelsiusSelectorPosition
                         withArg2:(long)positiveNegativeSelectorPosition
                         withArg3:(NSString *)userInputData
 {
+    
     
     //holds signed user input number.
     NSDecimalNumber *signedNumber;
@@ -73,6 +191,6 @@
     return convertedTemperature;
     
 }
-
+*/
 
 @end

@@ -12,20 +12,20 @@
 
 
 @interface RJDtemperatureViewController (convertTemperature)
-- (NSString *)convertTemperature:(long)fahrenheitCelsiusSelectorPosition
-                        withArg2:(long)positiveNegativeSelectorPosition
-                        withArg3:(NSString *)userInputData;
+- (NSString *)convertTemperature:(NSString *)userInputData
+                        withArg2:(long)fromUnitType
+                        withArg3:(long)toUnitType;
 
 @end
 
 @interface RJDtemperatureViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *displayResult;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *fahrenheitCelsiusSelector;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *positiveNegativeSelector;
-@property (weak, nonatomic) IBOutlet UITextField *userInput;
+@property (weak, nonatomic) IBOutlet UITextField *userInputKelvin;
+@property (weak, nonatomic) IBOutlet UITextField *userInputFahrenheit;
+@property (weak, nonatomic) IBOutlet UITextField *userInputCelsius;
 
 - (IBAction)calculateTemperature:(id)sender;
+
 - (IBAction)stopEditing:(id)sender;
 
 @end
@@ -59,8 +59,93 @@
 
 
 
+- (IBAction)calculateTemperature:(id)sender
+{
+    
+    switch ([sender tag])
+    {
+        // input is Kelven
+        case 1:
+            _userInputFahrenheit.text = [self convertTemperature:_userInputKelvin.text
+                                                        withArg2:[sender tag]
+                                                        withArg3:1];
+            
+            _userInputCelsius.text =    [self convertTemperature:_userInputKelvin.text
+                                                        withArg2:[sender tag]
+                                                        withArg3:2];
+            break;
+            
+        //input is Fahrenheit
+        case 2:
+            _userInputKelvin.text =     [self convertTemperature:_userInputFahrenheit.text
+                                                        withArg2:[sender tag]
+                                                        withArg3:1];
+            
+            _userInputCelsius.text =    [self convertTemperature:_userInputFahrenheit.text
+                                                        withArg2:[sender tag]
+                                                        withArg3:2];
+            break;
+            
+        //input is Celsius
+        case 3:
+            _userInputKelvin.text =     [self convertTemperature:_userInputCelsius.text
+                                                        withArg2:[sender tag]
+                                                        withArg3:1];
+            
+            _userInputFahrenheit.text = [self convertTemperature:_userInputCelsius.text
+                                                        withArg2:[sender tag]
+                                                        withArg3:2];
+            break;
+            
+        //input is Unknown
+        default:
+            _userInputKelvin.text = @"";
+            _userInputFahrenheit.text = @"";
+            _userInputCelsius.text = @"";
+            break;
+            
+    }
+}
+    
+    
+    
+/*
+    switch ([sender tag]) {
+        
+        // input is Kelvin
+        case 1:
+            NSLog(@"%ld", [sender tag]);
+            _userInputFahrenheit.text = @"1";
+            _userInputCelsius.text = @"1";
+            break;
 
-
+        // input is Fahrenheit
+        case 2:
+            NSLog(@"%ld", [sender tag]);
+            _userInputKelvin.text = @"2";
+            _userInputCelsius.text = @"2";
+            break;
+            
+        // input is Celsius
+        case 3:
+            NSLog(@"%ld", [sender tag]);
+            _userInputKelvin.text = @"3";
+            _userInputFahrenheit.text = @"3";
+            break;
+            
+        // unexpexted input
+        default:
+            _userInputKelvin.text = @"";
+            _userInputFahrenheit.text = @"";
+            _userInputCelsius.text = @"";
+            break;
+    }
+}
+*/
+ 
+ 
+ 
+/*
 - (IBAction)calculateTemperature:(id)sender
 {
 
@@ -76,11 +161,7 @@
     }
 
 }
-
-
-
-
-
+*/
 
 
 - (IBAction)stopEditing:(id)sender
