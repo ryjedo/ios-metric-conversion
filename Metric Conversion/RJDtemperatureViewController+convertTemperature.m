@@ -45,12 +45,21 @@
                 
                 //Kelvin to Fahrenheit
                 case 1:
-                    convertedTemperature = @"1F";
+                    convertedTemperature = [[[NSString alloc] initWithString:[[[[[[signedNumber decimalNumberByMultiplyingBy:nine]
+                                                                                                decimalNumberByDividingBy:five]
+                                                                                                decimalNumberByAdding:thirtyTwo]
+                                                                                                decimalNumberBySubtracting:kelvin273_15 ]
+                                                                                                decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
+                                                                                                description]]
+                                                                                                stringByAppendingString:@" F"];;
                     break;
 
                 //Kelvin to Celsius
                 case 2:
-                    convertedTemperature = @"1C";
+                    convertedTemperature = [[[NSString alloc] initWithString:[[[signedNumber    decimalNumberBySubtracting:kelvin273_15]
+                                                                                                decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
+                                                                                                description]]
+                                                                                                stringByAppendingString:@" C"];;
                     break;
             }
             
@@ -68,7 +77,13 @@
                     
                 //Fahrenheit to Kelvin
                 case 1:
-                    convertedTemperature = @"1K";
+                    convertedTemperature = [[[NSString alloc] initWithString:[[[[[[signedNumber decimalNumberBySubtracting:thirtyTwo]
+                                                                                                decimalNumberByMultiplyingBy:five]
+                                                                                                decimalNumberByDividingBy:nine]
+                                                                                                decimalNumberByAdding:kelvin273_15]
+                                                                                                decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
+                                                                                                description]]
+                                                                                                stringByAppendingString:@" K"];;
                     break;
                     
                 //Fahrenheit to Celsius
@@ -96,7 +111,10 @@
 
                 //Celsius to Kelvin
                 case 1:
-                    convertedTemperature = @"1K";
+                    convertedTemperature = [[[NSString alloc] initWithString:[[[signedNumber decimalNumberByAdding:kelvin273_15]
+                                                                                            decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
+                                                                                            description]]
+                                                                                            stringByAppendingString:@" K"];
                     break;
                     
                 //Celsius to Fahrenheit
@@ -106,7 +124,7 @@
                                                                                                 decimalNumberByAdding:thirtyTwo]
                                                                                                 decimalNumberByRoundingAccordingToBehavior:nearestFullInteger]
                                                                                                 description]]
-                                                                                                stringByAppendingString:@" F"];;
+                                                                                                stringByAppendingString:@" F"];
                     break;
             }
             

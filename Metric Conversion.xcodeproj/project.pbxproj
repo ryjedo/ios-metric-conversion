@@ -82,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		946E351A18959AB20005A6D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9473027018877E9F00A1AED6 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		947F4C21188D154F0084481C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,13 +141,13 @@
 		94D597211887792F009DAC13 /* Metric Conversion */ = {
 			isa = PBXGroup;
 			children = (
+				946E351A18959AB20005A6D6 /* Views */,
 				947F4C21188D154F0084481C /* Categories */,
 				94C3C0C3188A5AA0001563E1 /* Controllers */,
 				94D5972A1887792F009DAC13 /* RJDAppDelegate.h */,
 				94D5972B1887792F009DAC13 /* RJDAppDelegate.m */,
 				94D5972D1887792F009DAC13 /* Images.xcassets */,
 				94D597221887792F009DAC13 /* Supporting Files */,
-				9473027018877E9F00A1AED6 /* Main.storyboard */,
 			);
 			path = "Metric Conversion";
 			sourceTree = "<group>";

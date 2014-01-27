@@ -61,7 +61,7 @@
 
 - (IBAction)calculateTemperature:(id)sender
 {
-    
+    if ([[NSScanner scannerWithString:[sender text]] scanUnsignedLongLong:NULL]){
     switch ([sender tag])
     {
         // input is Kelven
@@ -103,8 +103,11 @@
             _userInputFahrenheit.text = @"";
             _userInputCelsius.text = @"";
             break;
-            
     }
+    } else {
+        
+    }
+    
 }
     
     
