@@ -10,13 +10,20 @@
 
 
 
+@interface UITextField (decimalInputOutput)
+
+- (NSDecimalNumber *)decimalNumberFromUserInput;
+
+@end
+
+
 
 @interface RJDtemperatureViewController (convertTemperature)
 - (NSString *)convertTemperature:(NSString *)userInputData
                         withArg2:(long)fromUnitType
                         withArg3:(long)toUnitType;
-
 @end
+
 
 @interface RJDtemperatureViewController ()
 
@@ -73,6 +80,8 @@
             _userInputCelsius.text =    [self convertTemperature:_userInputKelvin.text
                                                         withArg2:[sender tag]
                                                         withArg3:2];
+            
+            NSLog(@"%@", [sender decimalNumberFromUserInput]);
             break;
             
         //input is Fahrenheit
@@ -84,6 +93,8 @@
             _userInputCelsius.text =    [self convertTemperature:_userInputFahrenheit.text
                                                         withArg2:[sender tag]
                                                         withArg3:2];
+            
+            NSLog(@"%@", [sender decimalNumberFromUserInput]);
             break;
             
         //input is Celsius
@@ -95,6 +106,8 @@
             _userInputFahrenheit.text = [self convertTemperature:_userInputCelsius.text
                                                         withArg2:[sender tag]
                                                         withArg3:2];
+            
+            NSLog(@"%@", [sender decimalNumberFromUserInput]);
             break;
             
         //input is Unknown
