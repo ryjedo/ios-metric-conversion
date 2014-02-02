@@ -26,11 +26,13 @@
                                                                                   raiseOnDivideByZero:(NO)];
 
     return [[[[[inputTemperature decimalNumberByAdding:kelvin273_15]
-                               decimalNumberByMultiplyingBy:nine]
-                                  decimalNumberByDividingBy:five]
-                                      decimalNumberByAdding:thirtyTwo]
-                 decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
+                          decimalNumberByMultiplyingBy:nine]
+                             decimalNumberByDividingBy:five]
+                                 decimalNumberByAdding:thirtyTwo]
+            decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
+
+
 
 
 
@@ -45,8 +47,10 @@
                                                                                   raiseOnDivideByZero:(NO)];
 
     return [[inputTemperature decimalNumberByAdding:kelvin273_15]
-              decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
+         decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
+
+
 
 
 
@@ -66,9 +70,11 @@
     return [[[[[inputTemperature decimalNumberBySubtracting:thirtyTwo]
                                decimalNumberByMultiplyingBy:five]
                                   decimalNumberByDividingBy:nine]
-                                      decimalNumberBySubtracting:kelvin273_15]
+                                 decimalNumberBySubtracting:kelvin273_15]
                  decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
+
+
 
 
 
@@ -92,6 +98,8 @@
 
 
 
+
+
 +(NSDecimalNumber *)celsiusToKelvin:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
@@ -103,8 +111,10 @@
                                                                                   raiseOnDivideByZero:(NO)];
     
     return [[inputTemperature decimalNumberBySubtracting:kelvin273_15]
-         decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
+              decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
+
+
 
 
 
@@ -125,6 +135,8 @@
                                        decimalNumberByAdding:thirtyTwo]
                   decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
+
+
 
 
 
