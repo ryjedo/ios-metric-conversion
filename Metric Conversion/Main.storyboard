@@ -16,33 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb5-GS-SVV">
-                                <rect key="frame" x="93" y="105" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qQu-42-Pq4">
-                                <rect key="frame" x="119" y="136" width="82" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="F"/>
-                                    <segment title="C"/>
-                                </segments>
-                                <connections>
-                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="valueChanged" id="Ofw-51-xyk"/>
-                                </connections>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-Wk-KsW">
-                                <rect key="frame" x="119" y="211" width="82" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fahrenheit" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-Wk-KsW">
+                                <rect key="frame" x="119" y="134" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.72549021244049072" green="0.81176477670669556" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="QFE-GA-OIR"/>
+                                    <action selector="convertFahrenheit:" destination="vx7-HU-0MN" eventType="editingChanged" id="fx6-Vg-oc5"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kelvin" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="msw-tf-HFH">
+                                <rect key="frame" x="119" y="96" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.7254902124" green="0.81176477670000002" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="convertKelvin:" destination="vx7-HU-0MN" eventType="editingChanged" id="atf-bO-xNd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Celsius" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-TF-ynX">
+                                <rect key="frame" x="119" y="172" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.7254902124" green="0.81176477670000002" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="convertCelsius:" destination="vx7-HU-0MN" eventType="editingChanged" id="vG1-oo-P2M"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-rc-LnZ">
@@ -55,17 +59,6 @@
                                     <action selector="stopEditing:" destination="vx7-HU-0MN" eventType="touchUpInside" id="oE6-aq-bLo"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tUr-f4-KWi">
-                                <rect key="frame" x="119" y="172" width="82" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="+"/>
-                                    <segment title="-"/>
-                                </segments>
-                                <connections>
-                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="valueChanged" id="8nJ-7e-gnC"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.51209677419999999" green="0.69758064519999996" blue="0.82661290320000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -75,15 +68,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="qkw-Bg-gEU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="displayResult" destination="mb5-GS-SVV" id="lhy-uM-fYd"/>
-                        <outlet property="fahrenheitCelsiusSelector" destination="qQu-42-Pq4" id="2sH-S4-cK3"/>
-                        <outlet property="positiveNegativeSelector" destination="tUr-f4-KWi" id="YuR-U2-mbY"/>
-                        <outlet property="userInput" destination="l7l-Wk-KsW" id="0DF-ZM-yjG"/>
+                        <outlet property="userInputCelsius" destination="fjR-TF-ynX" id="2mC-6X-ewb"/>
+                        <outlet property="userInputFahrenheit" destination="l7l-Wk-KsW" id="8sF-RO-QC2"/>
+                        <outlet property="userInputKelvin" destination="msw-tf-HFH" id="67X-8q-Ij0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ago-vD-EBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="178"/>
+            <point key="canvasLocation" x="-6" y="315"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

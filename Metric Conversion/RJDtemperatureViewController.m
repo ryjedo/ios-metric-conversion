@@ -10,22 +10,41 @@
 
 
 
+@interface UITextField (decimalInputOutput)
 
-@interface RJDtemperatureViewController (convertTemperature)
-- (NSString *)convertTemperature:(long)fahrenheitCelsiusSelectorPosition
-                        withArg2:(long)positiveNegativeSelectorPosition
-                        withArg3:(NSString *)userInputData;
+- (NSDecimalNumber *)decimalNumberFromUserInput;
+
+- (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
 
 @end
 
+
+
+@interface NSDecimalNumber (temperatureConversionMath)
+
++ (NSDecimalNumber *)kelvinToFahrenheit:(NSDecimalNumber *)inputTemperature;
++ (NSDecimalNumber *)kelvinToCelsius:(NSDecimalNumber *)inputTemperature;
+
++ (NSDecimalNumber *)fahrenheitToKelvin:(NSDecimalNumber *)inputTemperature;
++ (NSDecimalNumber *)fahrenheitToCelsius:(NSDecimalNumber *)inputTemperature;
+
++ (NSDecimalNumber *)celsiusToKelvin:(NSDecimalNumber *)inputTemperature;
++ (NSDecimalNumber *)celsiusToFahrenheit:(NSDecimalNumber *)inputTemperature;
+
+@end
+
+
+
 @interface RJDtemperatureViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *displayResult;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *fahrenheitCelsiusSelector;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *positiveNegativeSelector;
-@property (weak, nonatomic) IBOutlet UITextField *userInput;
+@property (weak, nonatomic) IBOutlet UITextField *userInputKelvin;
+@property (weak, nonatomic) IBOutlet UITextField *userInputFahrenheit;
+@property (weak, nonatomic) IBOutlet UITextField *userInputCelsius;
 
-- (IBAction)calculateTemperature:(id)sender;
+- (IBAction)convertKelvin:(id)sender;
+- (IBAction)convertFahrenheit:(id)sender;
+- (IBAction)convertCelsius:(id)sender;
+
 - (IBAction)stopEditing:(id)sender;
 
 @end
@@ -57,29 +76,39 @@
 
 
 
-
-
-
-
-- (IBAction)calculateTemperature:(id)sender
+- (IBAction)convertKelvin:(id)sender
 {
-
-    if ([[NSScanner scannerWithString:[_userInput text]] scanUnsignedLongLong:NULL])
+    if ([[NSScanner scannerWithString:[_userInputKelvin text]] scanLongLong:NULL])
     {
-        _displayResult.text = [self convertTemperature:_fahrenheitCelsiusSelector.selectedSegmentIndex
-                                                        withArg2:_positiveNegativeSelector.selectedSegmentIndex
-                                                        withArg3:_userInput.text];
-    
-    } else {
-        _displayResult.text = @"";
-    
-    }
+        [_userInputFahrenheit setTextFromDecimalNumber:[NSDecimalNumber kelvinToFahrenheit:[sender decimalNumberFromUserInput]]];
 
+        [_userInputCelsius setTextFromDecimalNumber:[NSDecimalNumber kelvinToCelsius:[sender decimalNumberFromUserInput]]];
+    }
 }
 
 
 
+- (IBAction)convertFahrenheit:(id)sender
+{
+    if ([[NSScanner scannerWithString:[_userInputFahrenheit text]] scanLongLong:NULL])
+    {
+        [_userInputKelvin setTextFromDecimalNumber:[NSDecimalNumber fahrenheitToKelvin:[sender decimalNumberFromUserInput]]];
+    
+        [_userInputCelsius setTextFromDecimalNumber:[NSDecimalNumber fahrenheitToCelsius:[sender decimalNumberFromUserInput]]];
+    }
+}
 
+
+
+- (IBAction)convertCelsius:(id)sender
+{
+    if ([[NSScanner scannerWithString:[_userInputCelsius text]] scanLongLong:NULL])
+    {
+        [_userInputKelvin setTextFromDecimalNumber:[NSDecimalNumber celsiusToKelvin:[sender decimalNumberFromUserInput]]];
+
+        [_userInputFahrenheit setTextFromDecimalNumber:[NSDecimalNumber celsiusToFahrenheit:[sender decimalNumberFromUserInput]]];
+    }
+}
 
 
 
