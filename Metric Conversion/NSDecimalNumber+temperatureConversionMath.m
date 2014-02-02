@@ -12,6 +12,11 @@
 
 
 
+
+
+//
+// convert Kelvin to Fahrenheit
+//
 + (NSDecimalNumber *)kelvinToFahrenheit:(NSDecimalNumber *)inputTemperature
 {
     NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
@@ -36,6 +41,9 @@
 
 
 
+//
+// convert Kelvin to Celsius
+//
 + (NSDecimalNumber *)kelvinToCelsius:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
@@ -54,6 +62,9 @@
 
 
 
+//
+// convert Fahrenheit to Kelvin
+//
 + (NSDecimalNumber *)fahrenheitToKelvin:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
@@ -78,6 +89,9 @@
 
 
 
+//
+// convert Fahrenheit to Celsius
+//
 + (NSDecimalNumber *)fahrenheitToCelsius:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
@@ -100,6 +114,9 @@
 
 
 
+//
+// convert Celsius to Kelvin
+//
 +(NSDecimalNumber *)celsiusToKelvin:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
@@ -118,6 +135,9 @@
 
 
 
+//
+// convert Celsius to Fahrenheit
+//
 + (NSDecimalNumber *)celsiusToFahrenheit:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
