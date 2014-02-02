@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UITextField (decimalInputOutput)
+
 - (NSDecimalNumber *)decimalNumberFromUserInput;
+
+- (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
+
 @end

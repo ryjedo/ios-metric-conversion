@@ -17,4 +17,9 @@
     return number;
 }
 
+- (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
+{
+    self.text = [[NSString alloc] initWithString:displayTemperature.description];
+}
+
 @end

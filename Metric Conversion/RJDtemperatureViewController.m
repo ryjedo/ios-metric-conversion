@@ -14,7 +14,10 @@
 
 - (NSDecimalNumber *)decimalNumberFromUserInput;
 
+- (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
+
 @end
+
 
 
 
@@ -73,9 +76,7 @@
     {
         // input is Kelven
         case 1:
-            _userInputFahrenheit.text = [self convertTemperature:_userInputKelvin.text
-                                                        withArg2:[sender tag]
-                                                        withArg3:1];
+            [_userInputFahrenheit setTextFromDecimalNumber:[[NSDecimalNumber alloc] initWithString:_userInputKelvin.text]];
             
             _userInputCelsius.text =    [self convertTemperature:_userInputKelvin.text
                                                         withArg2:[sender tag]
