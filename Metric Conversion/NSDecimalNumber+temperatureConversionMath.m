@@ -11,6 +11,16 @@
 @implementation NSDecimalNumber (temperatureConversionMath)
 
 
+/*
+NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                            scale:(0)
+                                                                                 raiseOnExactness:(NO)
+                                                                                  raiseOnOverflow:(NO)
+                                                                                 raiseOnUnderflow:(NO)
+                                                                              raiseOnDivideByZero:(NO)];
+
+ 
+ */
 
 
 + (NSDecimalNumber *)kelvinToFahrenheit:(NSDecimalNumber *)inputTemperature
@@ -19,16 +29,28 @@
     NSDecimalNumber *nine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
     NSDecimalNumber *five = [[NSDecimalNumber alloc] initWithString:@"5.0"];
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
     NSDecimalNumber *number;
-    number = [[[[inputTemperature  decimalNumberBySubtracting:kelvin273_15] decimalNumberByMultiplyingBy:nine] decimalNumberByDividingBy:five] decimalNumberByAdding:thirtyTwo];
+    number = [[[[[inputTemperature  decimalNumberBySubtracting:kelvin273_15] decimalNumberByMultiplyingBy:nine] decimalNumberByDividingBy:five] decimalNumberByAdding:thirtyTwo] decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
     return number;
 }
 
 + (NSDecimalNumber *)kelvinToCelsius:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
     NSDecimalNumber *number;
-    number = [inputTemperature decimalNumberBySubtracting:kelvin273_15];
+    number = [[inputTemperature decimalNumberBySubtracting:kelvin273_15] decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
     return number;
 }
 
@@ -38,8 +60,14 @@
     NSDecimalNumber *nine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
     NSDecimalNumber *five = [[NSDecimalNumber alloc] initWithString:@"5.0"];
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
     NSDecimalNumber *number;
-    number = [[[[inputTemperature decimalNumberBySubtracting:thirtyTwo] decimalNumberByMultiplyingBy:five] decimalNumberByDividingBy:nine] decimalNumberByAdding:kelvin273_15];
+    number = [[[[[inputTemperature decimalNumberBySubtracting:thirtyTwo] decimalNumberByMultiplyingBy:five] decimalNumberByDividingBy:nine] decimalNumberByAdding:kelvin273_15] decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
     return number;
 }
 
@@ -48,16 +76,28 @@
     NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
     NSDecimalNumber *nine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
     NSDecimalNumber *five = [[NSDecimalNumber alloc] initWithString:@"5.0"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
     NSDecimalNumber *number;
-    number = [[[inputTemperature decimalNumberBySubtracting:thirtyTwo] decimalNumberByMultiplyingBy:five] decimalNumberByDividingBy:nine];
+    number = [[[[inputTemperature decimalNumberBySubtracting:thirtyTwo] decimalNumberByMultiplyingBy:five] decimalNumberByDividingBy:nine] decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
     return number;
 }
 
 +(NSDecimalNumber *)celsiusToKelvin:(NSDecimalNumber *)inputTemperature;
 {
     NSDecimalNumber *kelvin273_15 = [[NSDecimalNumber alloc] initWithString:@"273.15"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
     NSDecimalNumber *number;
-    number = [inputTemperature decimalNumberByAdding:kelvin273_15];
+    number = [[inputTemperature decimalNumberByAdding:kelvin273_15] decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
     return number;
 }
 
@@ -66,8 +106,14 @@
     NSDecimalNumber *thirtyTwo = [[NSDecimalNumber alloc] initWithString:@"32.0"];
     NSDecimalNumber *nine = [[NSDecimalNumber alloc] initWithString:@"9.0"];
     NSDecimalNumber *five = [[NSDecimalNumber alloc] initWithString:@"5.0"];
+    NSDecimalNumberHandler *nearestFullInteger = [[NSDecimalNumberHandler alloc] initWithRoundingMode:NSRoundPlain
+                                                                                                scale:(0)
+                                                                                     raiseOnExactness:(NO)
+                                                                                      raiseOnOverflow:(NO)
+                                                                                     raiseOnUnderflow:(NO)
+                                                                                  raiseOnDivideByZero:(NO)];
     NSDecimalNumber *number;
-    number = [[[inputTemperature decimalNumberByMultiplyingBy:nine] decimalNumberByDividingBy:five] decimalNumberByAdding:thirtyTwo];
+    number = [[[[inputTemperature decimalNumberByMultiplyingBy:nine] decimalNumberByDividingBy:five] decimalNumberByAdding:thirtyTwo] decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
     return number;
 }
 
