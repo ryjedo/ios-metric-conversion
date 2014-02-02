@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940E649B18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E649A18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m */; };
 		9439C85A189D92DE006E88DE /* UITextField+decimalInputOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 9439C859189D92DE006E88DE /* UITextField+decimalInputOutput.m */; };
 		94493336189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 94493335189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.m */; };
 		9473027118877E9F00A1AED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9473027018877E9F00A1AED6 /* Main.storyboard */; };
@@ -37,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		940E649918920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RJDtemperatureViewController+convertTemperature.h"; sourceTree = "<group>"; };
-		940E649A18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RJDtemperatureViewController+convertTemperature.m"; sourceTree = "<group>"; };
 		9439C858189D92DE006E88DE /* UITextField+decimalInputOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+decimalInputOutput.h"; sourceTree = "<group>"; };
 		9439C859189D92DE006E88DE /* UITextField+decimalInputOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+decimalInputOutput.m"; sourceTree = "<group>"; };
 		94493334189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+temperatureConversionMath.h"; sourceTree = "<group>"; };
@@ -99,8 +96,6 @@
 		947F4C21188D154F0084481C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				940E649918920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.h */,
-				940E649A18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m */,
 				9439C858189D92DE006E88DE /* UITextField+decimalInputOutput.h */,
 				9439C859189D92DE006E88DE /* UITextField+decimalInputOutput.m */,
 				94493334189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.h */,
@@ -289,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D597281887792F009DAC13 /* main.m in Sources */,
-				940E649B18920669006ABCF8 /* RJDtemperatureViewController+convertTemperature.m in Sources */,
 				9439C85A189D92DE006E88DE /* UITextField+decimalInputOutput.m in Sources */,
 				9473027A188791F800A1AED6 /* RJDtemperatureViewController.m in Sources */,
 				94493336189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.m in Sources */,
