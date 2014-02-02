@@ -25,7 +25,7 @@
                                                                                      raiseOnUnderflow:(NO)
                                                                                   raiseOnDivideByZero:(NO)];
 
-    return [[[[[inputTemperature decimalNumberBySubtracting:kelvin273_15]
+    return [[[[[inputTemperature decimalNumberByAdding:kelvin273_15]
                                decimalNumberByMultiplyingBy:nine]
                                   decimalNumberByDividingBy:five]
                                       decimalNumberByAdding:thirtyTwo]
@@ -44,7 +44,7 @@
                                                                                      raiseOnUnderflow:(NO)
                                                                                   raiseOnDivideByZero:(NO)];
 
-    return [[inputTemperature decimalNumberBySubtracting:kelvin273_15]
+    return [[inputTemperature decimalNumberByAdding:kelvin273_15]
               decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
 
@@ -66,7 +66,7 @@
     return [[[[[inputTemperature decimalNumberBySubtracting:thirtyTwo]
                                decimalNumberByMultiplyingBy:five]
                                   decimalNumberByDividingBy:nine]
-                                      decimalNumberByAdding:kelvin273_15]
+                                      decimalNumberBySubtracting:kelvin273_15]
                  decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
 
@@ -102,7 +102,7 @@
                                                                                      raiseOnUnderflow:(NO)
                                                                                   raiseOnDivideByZero:(NO)];
     
-    return [[inputTemperature decimalNumberByAdding:kelvin273_15]
+    return [[inputTemperature decimalNumberBySubtracting:kelvin273_15]
          decimalNumberByRoundingAccordingToBehavior:nearestFullInteger];
 }
 

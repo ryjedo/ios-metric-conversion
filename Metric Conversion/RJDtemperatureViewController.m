@@ -104,7 +104,7 @@
 {
     if ([[NSScanner scannerWithString:[_userInputCelsius text]] scanLongLong:NULL])
     {
-        [_userInputKelvin setTextFromDecimalNumber:[NSDecimalNumber celsiusToFahrenheit:[sender decimalNumberFromUserInput]]];
+        [_userInputKelvin setTextFromDecimalNumber:[NSDecimalNumber celsiusToKelvin:[sender decimalNumberFromUserInput]]];
 
         [_userInputFahrenheit setTextFromDecimalNumber:[NSDecimalNumber celsiusToFahrenheit:[sender decimalNumberFromUserInput]]];
     }
