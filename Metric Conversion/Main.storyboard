@@ -24,7 +24,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="LSJ-cj-3JX"/>
+                                    <action selector="convertFahrenheit:" destination="vx7-HU-0MN" eventType="editingChanged" id="fx6-Vg-oc5"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kelvin" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="msw-tf-HFH">
@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="Ca3-ys-Mu7"/>
+                                    <action selector="convertKelvin:" destination="vx7-HU-0MN" eventType="editingChanged" id="atf-bO-xNd"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Celsius" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-TF-ynX">
@@ -46,7 +46,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="calculateTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="EJ1-CY-cpk"/>
+                                    <action selector="convertCelsius:" destination="vx7-HU-0MN" eventType="editingChanged" id="vG1-oo-P2M"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-rc-LnZ">
@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ago-vD-EBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108" y="316"/>
+            <point key="canvasLocation" x="-6" y="315"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
