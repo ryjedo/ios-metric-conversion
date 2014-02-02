@@ -12,9 +12,7 @@
 
 - (NSDecimalNumber *)decimalNumberFromUserInput;
 {
-    NSString *string = self.text;
-    NSDecimalNumber *number = [[NSDecimalNumber alloc] initWithString:string];
-    return number;
+    return [[NSDecimalNumber alloc] initWithString:self.text];
 }
 
 - (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
