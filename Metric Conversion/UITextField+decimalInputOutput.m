@@ -10,14 +10,22 @@
 
 @implementation UITextField (decimalInputOutput)
 
+
+
+// returns contents of UITextField.text as NSDecimalNumber
 - (NSDecimalNumber *)decimalNumberFromUserInput;
 {
     return [[NSDecimalNumber alloc] initWithString:self.text];
 }
 
+
+
+// accepts NSDecimalNumber as input for setting UITextField.text
 - (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
 {
     self.text = [[NSString alloc] initWithString:displayTemperature.description];
 }
+
+
 
 @end

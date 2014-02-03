@@ -44,7 +44,6 @@
 - (IBAction)convertKelvin:(id)sender;
 - (IBAction)convertFahrenheit:(id)sender;
 - (IBAction)convertCelsius:(id)sender;
-
 - (IBAction)stopEditing:(id)sender;
 
 @end
@@ -76,48 +75,77 @@
 
 
 
+// converts Kelvin temperatures to Fahrenheit and Celsius
 - (IBAction)convertKelvin:(id)sender
 {
+    
     if ([[NSScanner scannerWithString:[_userInputKelvin text]] scanLongLong:NULL])
     {
-        [_userInputFahrenheit setTextFromDecimalNumber:[NSDecimalNumber kelvinToFahrenheit:[sender decimalNumberFromUserInput]]];
+        
+        [_userInputFahrenheit setTextFromDecimalNumber:
+         [NSDecimalNumber kelvinToFahrenheit:
+          [sender decimalNumberFromUserInput]]];
 
-        [_userInputCelsius setTextFromDecimalNumber:[NSDecimalNumber kelvinToCelsius:[sender decimalNumberFromUserInput]]];
+        [_userInputCelsius setTextFromDecimalNumber:
+         [NSDecimalNumber kelvinToCelsius:
+          [sender decimalNumberFromUserInput]]];
+        
     }
+    
 }
 
 
 
+// converts Fahrenheit temperatures to Kelvin to Celsius
 - (IBAction)convertFahrenheit:(id)sender
 {
+    
     if ([[NSScanner scannerWithString:[_userInputFahrenheit text]] scanLongLong:NULL])
     {
-        [_userInputKelvin setTextFromDecimalNumber:[NSDecimalNumber fahrenheitToKelvin:[sender decimalNumberFromUserInput]]];
+        
+        [_userInputKelvin setTextFromDecimalNumber:
+         [NSDecimalNumber fahrenheitToKelvin:
+          [sender decimalNumberFromUserInput]]];
     
-        [_userInputCelsius setTextFromDecimalNumber:[NSDecimalNumber fahrenheitToCelsius:[sender decimalNumberFromUserInput]]];
+        [_userInputCelsius setTextFromDecimalNumber:
+         [NSDecimalNumber fahrenheitToCelsius:
+          [sender decimalNumberFromUserInput]]];
+        
     }
+    
 }
 
 
 
+// converts Celsius to Kelvin to Fahrenheit
 - (IBAction)convertCelsius:(id)sender
 {
+
     if ([[NSScanner scannerWithString:[_userInputCelsius text]] scanLongLong:NULL])
     {
-        [_userInputKelvin setTextFromDecimalNumber:[NSDecimalNumber celsiusToKelvin:[sender decimalNumberFromUserInput]]];
+        
+        [_userInputKelvin setTextFromDecimalNumber:
+         [NSDecimalNumber celsiusToKelvin:
+          [sender decimalNumberFromUserInput]]];
 
-        [_userInputFahrenheit setTextFromDecimalNumber:[NSDecimalNumber celsiusToFahrenheit:[sender decimalNumberFromUserInput]]];
+        [_userInputFahrenheit setTextFromDecimalNumber:
+         [NSDecimalNumber celsiusToFahrenheit:
+          [sender decimalNumberFromUserInput]]];
+        
     }
+
 }
 
 
 
+// drops focus of UITextField and dismisses keyboard
 - (IBAction)stopEditing:(id)sender
 {
 
     [self.view endEditing:YES];
 
 }
+
 
 
 @end
