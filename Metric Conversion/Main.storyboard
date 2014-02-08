@@ -49,16 +49,6 @@
                                     <action selector="convertCelsius:" destination="vx7-HU-0MN" eventType="editingChanged" id="vG1-oo-P2M"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-rc-LnZ">
-                                <rect key="frame" x="140" y="269" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopEditing:" destination="vx7-HU-0MN" eventType="touchUpInside" id="oE6-aq-bLo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51209677419999999" green="0.69758064519999996" blue="0.82661290320000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -75,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ago-vD-EBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="315"/>
+            <point key="canvasLocation" x="391" y="288"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

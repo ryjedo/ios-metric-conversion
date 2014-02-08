@@ -11,6 +11,7 @@
 		94493336189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 94493335189E1C6500872C4C /* NSDecimalNumber+temperatureConversionMath.m */; };
 		9473027118877E9F00A1AED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9473027018877E9F00A1AED6 /* Main.storyboard */; };
 		9473027A188791F800A1AED6 /* RJDtemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94730279188791F800A1AED6 /* RJDtemperatureViewController.m */; };
+		94D4D46A18A6D7AE00842DDC /* RJDkeyboardToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D4D46918A6D7AE00842DDC /* RJDkeyboardToolbar.xib */; };
 		94D5971C1887792F009DAC13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971B1887792F009DAC13 /* Foundation.framework */; };
 		94D5971E1887792F009DAC13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971D1887792F009DAC13 /* CoreGraphics.framework */; };
 		94D597201887792F009DAC13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D5971F1887792F009DAC13 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 		9473027018877E9F00A1AED6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		94730278188791F800A1AED6 /* RJDtemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDtemperatureViewController.h; sourceTree = "<group>"; };
 		94730279188791F800A1AED6 /* RJDtemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDtemperatureViewController.m; sourceTree = "<group>"; };
+		94D4D46918A6D7AE00842DDC /* RJDkeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RJDkeyboardToolbar.xib; sourceTree = "<group>"; };
 		94D597181887792F009DAC13 /* Metric Conversion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metric Conversion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D5971B1887792F009DAC13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D5971D1887792F009DAC13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9473027018877E9F00A1AED6 /* Main.storyboard */,
+				94D4D46918A6D7AE00842DDC /* RJDkeyboardToolbar.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				9473027118877E9F00A1AED6 /* Main.storyboard in Resources */,
 				94D597261887792F009DAC13 /* InfoPlist.strings in Resources */,
 				94D5972E1887792F009DAC13 /* Images.xcassets in Resources */,
+				94D4D46A18A6D7AE00842DDC /* RJDkeyboardToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

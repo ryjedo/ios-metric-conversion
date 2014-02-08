@@ -37,9 +37,11 @@
 
 @interface RJDtemperatureViewController ()
 
+
 @property (weak, nonatomic) IBOutlet UITextField *userInputKelvin;
 @property (weak, nonatomic) IBOutlet UITextField *userInputFahrenheit;
 @property (weak, nonatomic) IBOutlet UITextField *userInputCelsius;
+@property (weak, nonatomic) UIToolbar *keyboardToolbar;
 
 - (IBAction)convertKelvin:(id)sender;
 - (IBAction)convertFahrenheit:(id)sender;
@@ -52,28 +54,14 @@
 
 @implementation RJDtemperatureViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    _keyboardToolbar= [[[NSBundle mainBundle] loadNibNamed:@"RJDkeyboardToolbar" owner:self options:nil] objectAtIndex:0];
+    [self.userInputCelsius setInputAccessoryView:_keyboardToolbar];
+    [self.userInputKelvin setInputAccessoryView:_keyboardToolbar];
+    [self.userInputFahrenheit setInputAccessoryView:_keyboardToolbar];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 
 // converts Kelvin temperatures to Fahrenheit and Celsius
 - (IBAction)convertKelvin:(id)sender
@@ -81,6 +69,8 @@
     
     if ([[NSScanner scannerWithString:[_userInputKelvin text]] scanLongLong:NULL])
     {
+	    
+        //[sender setInputAccessoryView:_keyboardToolbar];
         
         [_userInputFahrenheit setTextFromDecimalNumber:
          [NSDecimalNumber kelvinToFahrenheit:
@@ -102,6 +92,7 @@
     
     if ([[NSScanner scannerWithString:[_userInputFahrenheit text]] scanLongLong:NULL])
     {
+        //[sender setInputAccessoryView:_keyboardToolbar];
         
         [_userInputKelvin setTextFromDecimalNumber:
          [NSDecimalNumber fahrenheitToKelvin:
@@ -123,6 +114,7 @@
 
     if ([[NSScanner scannerWithString:[_userInputCelsius text]] scanLongLong:NULL])
     {
+        //[sender setInputAccessoryView:_keyboardToolbar];
         
         [_userInputKelvin setTextFromDecimalNumber:
          [NSDecimalNumber celsiusToKelvin:
