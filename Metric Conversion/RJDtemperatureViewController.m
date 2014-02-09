@@ -63,6 +63,12 @@
     [self.userInputFahrenheit setInputAccessoryView:_keyboardToolbar];
 }
 
+- (IBAction)setNegative:(id)sender
+{
+    _userInputCelsius.text = @"-";
+}
+
+
 // converts Kelvin temperatures to Fahrenheit and Celsius
 - (IBAction)convertKelvin:(id)sender
 {

@@ -10,7 +10,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
             <items>
-                <barButtonItem title="-" id="UEp-fs-z1Q"/>
+                <barButtonItem title="-" id="UEp-fs-z1Q">
+                    <connections>
+                        <action selector="setNegative:" destination="-1" id="ek7-Td-B2i"/>
+                    </connections>
+                </barButtonItem>
                 <barButtonItem style="plain" systemItem="flexibleSpace" id="9Bf-FL-cOH"/>
                 <barButtonItem title="Done" id="Ijq-My-0Pf">
                     <connections>

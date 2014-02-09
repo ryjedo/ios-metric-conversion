@@ -87,6 +87,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94344A3B18A71CFB000D437A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		946E351A18959AB20005A6D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +156,7 @@
 		94D597211887792F009DAC13 /* Metric Conversion */ = {
 			isa = PBXGroup;
 			children = (
+				94344A3B18A71CFB000D437A /* Models */,
 				946E351A18959AB20005A6D6 /* Views */,
 				947F4C21188D154F0084481C /* Categories */,
 				94C3C0C3188A5AA0001563E1 /* Controllers */,
