@@ -4,16 +4,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RJDtemperatureViewController"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RJDtemperatureViewController">
+            <connections>
+                <outlet property="inputTemperatureType" destination="ESa-11-fDB" id="bqV-ed-Nv8"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Tq4-Wb-S5u">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
             <items>
-                <barButtonItem title="-" id="UEp-fs-z1Q">
+                <barButtonItem title="-" width="31" id="UEp-fs-z1Q">
                     <connections>
                         <action selector="setNegative:" destination="-1" id="ek7-Td-B2i"/>
                     </connections>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="y2h-6n-dHN"/>
+                <barButtonItem style="plain" id="OSW-IR-dI3">
+                    <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ESa-11-fDB">
+                        <rect key="frame" x="93" y="6" width="134" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <segments>
+                            <segment title="F"/>
+                            <segment title="K"/>
+                            <segment title="C"/>
+                        </segments>
+                    </segmentedControl>
                 </barButtonItem>
                 <barButtonItem style="plain" systemItem="flexibleSpace" id="9Bf-FL-cOH"/>
                 <barButtonItem title="Done" id="Ijq-My-0Pf">

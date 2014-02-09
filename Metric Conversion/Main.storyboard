@@ -16,39 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fahrenheit" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-Wk-KsW">
-                                <rect key="frame" x="119" y="193" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.72549021244049072" green="0.81176477670669556" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
-                                <connections>
-                                    <action selector="convertFahrenheit:" destination="vx7-HU-0MN" eventType="editingChanged" id="fx6-Vg-oc5"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kelvin" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="msw-tf-HFH">
-                                <rect key="frame" x="119" y="155" width="82" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Temp." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-TF-ynX">
+                                <rect key="frame" x="110" y="269" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.7254902124" green="0.81176477670000002" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="convertKelvin:" destination="vx7-HU-0MN" eventType="editingChanged" id="atf-bO-xNd"/>
+                                    <action selector="convertTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="6aa-SK-Chi"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Celsius" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-TF-ynX">
-                                <rect key="frame" x="119" y="231" width="82" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXC-xG-rUl">
+                                <rect key="frame" x="35" y="240" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.7254902124" green="0.81176477670000002" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
-                                <connections>
-                                    <action selector="convertCelsius:" destination="vx7-HU-0MN" eventType="editingChanged" id="vG1-oo-P2M"/>
-                                </connections>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kelvin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxD-l7-abq">
+                                <rect key="frame" x="35" y="211" width="250" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FahrenHeit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-Am-6HM">
+                                <rect key="frame" x="35" y="182" width="250" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.51209677419999999" green="0.69758064519999996" blue="0.82661290320000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -58,9 +54,10 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="qkw-Bg-gEU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="userInputCelsius" destination="fjR-TF-ynX" id="2mC-6X-ewb"/>
-                        <outlet property="userInputFahrenheit" destination="l7l-Wk-KsW" id="8sF-RO-QC2"/>
-                        <outlet property="userInputKelvin" destination="msw-tf-HFH" id="67X-8q-Ij0"/>
+                        <outlet property="celsiusDisplay" destination="JXC-xG-rUl" id="lmM-Ns-GnO"/>
+                        <outlet property="fahrenheitDisplay" destination="MC1-Am-6HM" id="xIj-Yp-f2x"/>
+                        <outlet property="kelvinDisplay" destination="uxD-l7-abq" id="cew-wa-2hU"/>
+                        <outlet property="userInputTemperature" destination="fjR-TF-ynX" id="hLJ-cM-9Gd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ago-vD-EBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
