@@ -84,21 +84,21 @@
             //Fahrenheit
             case 0:
                 [_fahrenheitDisplay setFahrenheitTemperatureFromDecimalNumber:[_userInputTemperature decimalNumberFromUserInput]];
-                [_kelvinDisplay setKelvinTemperatureFromDecimalNumber:[NSDecimalNumber fahrenheitToKelvin:[sender decimalNumberFromUserInput]]];
-                [_celsiusDisplay setCelsiusTemperatureFromDecimalNumber:[NSDecimalNumber fahrenheitToCelsius:[sender decimalNumberFromUserInput]]];
+                [_kelvinDisplay setKelvinTemperatureFromDecimalNumber:[NSDecimalNumber fahrenheitToKelvin:[_userInputTemperature decimalNumberFromUserInput]]];
+                [_celsiusDisplay setCelsiusTemperatureFromDecimalNumber:[NSDecimalNumber fahrenheitToCelsius:[_userInputTemperature decimalNumberFromUserInput]]];
                 break;
             
             //Kelvin
             case 1:
-                [_fahrenheitDisplay setFahrenheitTemperatureFromDecimalNumber:[NSDecimalNumber kelvinToFahrenheit:[sender decimalNumberFromUserInput]]];
+                [_fahrenheitDisplay setFahrenheitTemperatureFromDecimalNumber:[NSDecimalNumber kelvinToFahrenheit:[_userInputTemperature decimalNumberFromUserInput]]];
                 [_kelvinDisplay setKelvinTemperatureFromDecimalNumber:[_userInputTemperature decimalNumberFromUserInput]];
-                [_celsiusDisplay setCelsiusTemperatureFromDecimalNumber:[NSDecimalNumber kelvinToCelsius:[sender decimalNumberFromUserInput]]];
+                [_celsiusDisplay setCelsiusTemperatureFromDecimalNumber:[NSDecimalNumber kelvinToCelsius:[_userInputTemperature decimalNumberFromUserInput]]];
                 break;
 
             //Celsius
             case 2:
-                [_fahrenheitDisplay setKelvinTemperatureFromDecimalNumber:[NSDecimalNumber celsiusToFahrenheit:[sender decimalNumberFromUserInput]]];
-                [_kelvinDisplay setKelvinTemperatureFromDecimalNumber:[NSDecimalNumber celsiusToKelvin:[sender decimalNumberFromUserInput]]];
+                [_fahrenheitDisplay setKelvinTemperatureFromDecimalNumber:[NSDecimalNumber celsiusToFahrenheit:[_userInputTemperature decimalNumberFromUserInput]]];
+                [_kelvinDisplay setKelvinTemperatureFromDecimalNumber:[NSDecimalNumber celsiusToKelvin:[_userInputTemperature decimalNumberFromUserInput]]];
                 [_celsiusDisplay setCelsiusTemperatureFromDecimalNumber:[_userInputTemperature decimalNumberFromUserInput]];
                 break;
             
