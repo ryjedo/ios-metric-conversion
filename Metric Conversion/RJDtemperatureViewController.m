@@ -53,6 +53,7 @@
 
 - (IBAction)convertTemperature:(id)sender;
 - (IBAction)stopEditing:(id)sender;
+- (IBAction)tapUiTextField:(id)sender;
 
 @end
 
@@ -126,6 +127,15 @@
         _celsiusDisplay.text = @"";
     }
 }
+
+
+- (IBAction)tapUiTextField:(id)sender;
+{
+
+    _userInputTemperature.text = @"";
+    
+}
+
 
 
 
