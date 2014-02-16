@@ -1,5 +1,5 @@
 //
-//  RJDTempViewController.h
+//  RJDtemperatureViewController.h
 //  Metric Conversion
 //
 //  Created by Ryan J Dobrynski on 1/15/14.
@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface RJDtempViewController : UIViewController
+@interface RJDtemperatureViewController : UIViewController
 @end
+    

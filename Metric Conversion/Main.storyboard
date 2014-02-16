@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Dtemp View Controller - Temp-->
+        <!--Dtemperature View Controller - Temp-->
         <scene sceneID="oKb-2A-Mt1">
             <objects>
-                <viewController id="vx7-HU-0MN" customClass="RJDtempViewController" sceneMemberID="viewController">
+                <viewController id="vx7-HU-0MN" customClass="RJDtemperatureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kbj-3V-XBJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ykt-Ws-lC6"/>
@@ -16,57 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb5-GS-SVV">
-                                <rect key="frame" x="93" y="105" width="135" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Temp." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-TF-ynX">
+                                <rect key="frame" x="110" y="269" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="backgroundColor" red="0.7254902124" green="0.81176477670000002" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qQu-42-Pq4">
-                                <rect key="frame" x="119" y="136" width="82" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="F"/>
-                                    <segment title="C"/>
-                                </segments>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go"/>
                                 <connections>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="valueChanged" id="4Id-hO-jjZ"/>
-                                </connections>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-Wk-KsW">
-                                <rect key="frame" x="119" y="211" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.72549021244049072" green="0.81176477670669556" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
-                                <connections>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="editingChanged" id="6GE-Sb-Vdo"/>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="valueChanged" id="aby-mF-UbI"/>
+                                    <action selector="convertTemperature:" destination="vx7-HU-0MN" eventType="editingChanged" id="6aa-SK-Chi"/>
+                                    <action selector="tapUiTextField:" destination="vx7-HU-0MN" eventType="touchDown" id="wuw-tg-Z4s"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-rc-LnZ">
-                                <rect key="frame" x="140" y="249" width="40" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXC-xG-rUl">
+                                <rect key="frame" x="35" y="240" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="RJDtempEditClose:" destination="vx7-HU-0MN" eventType="touchUpInside" id="oxR-PL-PZe"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tUr-f4-KWi">
-                                <rect key="frame" x="119" y="172" width="82" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxD-l7-abq">
+                                <rect key="frame" x="35" y="211" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="+"/>
-                                    <segment title="-"/>
-                                </segments>
-                                <connections>
-                                    <action selector="RJDtempConvert:" destination="vx7-HU-0MN" eventType="valueChanged" id="clq-01-S30"/>
-                                </connections>
-                            </segmentedControl>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-Am-6HM">
+                                <rect key="frame" x="35" y="182" width="250" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.51209677419999999" green="0.69758064519999996" blue="0.82661290320000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -76,15 +55,15 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="qkw-Bg-gEU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="RJDtempFcSelector" destination="qQu-42-Pq4" id="pNs-n9-G7e"/>
-                        <outlet property="RJDtempPosNegSelector" destination="tUr-f4-KWi" id="Q86-fO-GzN"/>
-                        <outlet property="RJDtempResults" destination="mb5-GS-SVV" id="kUp-1G-Rv5"/>
-                        <outlet property="RJDtempUserInput" destination="l7l-Wk-KsW" id="2uf-9j-2bY"/>
+                        <outlet property="celsiusDisplay" destination="JXC-xG-rUl" id="lmM-Ns-GnO"/>
+                        <outlet property="fahrenheitDisplay" destination="MC1-Am-6HM" id="xIj-Yp-f2x"/>
+                        <outlet property="kelvinDisplay" destination="uxD-l7-abq" id="cew-wa-2hU"/>
+                        <outlet property="userInputTemperature" destination="fjR-TF-ynX" id="hLJ-cM-9Gd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ago-vD-EBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="54"/>
+            <point key="canvasLocation" x="497" y="289"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
