@@ -12,6 +12,4 @@
 
 - (NSDecimalNumber *)decimalNumberFromUserInput;
 
-- (void) setTextFromDecimalNumber:(NSDecimalNumber *)displayTemperature;
-
 @end
