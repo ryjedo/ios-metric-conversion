@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Ryan J Dobrynski. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
+
 
 @interface NSDecimalNumber (temperatureConversionMath)
 
@@ -17,6 +19,6 @@
 + (NSDecimalNumber *)fahrenheitToCelsius:(NSDecimalNumber *)inputTemperature;
 
 + (NSDecimalNumber *)celsiusToKelvin:(NSDecimalNumber *)inputTemperature;
-+ (NSDecimalNumber *)celsiusToFahrenheit:(NSDecimalNumber *)inputTemperature;
++(NSDecimalNumber *)celsiusToFahrenheit:(NSDecimalNumber *)inputTemperature;
 
 @end

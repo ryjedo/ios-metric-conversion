@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Ryan J Dobrynski. All rights reserved.
 //
 
+
 #import "NSDecimalNumber+temperatureConversionMath.h"
+
 
 @implementation NSDecimalNumber (temperatureConversionMath)
 

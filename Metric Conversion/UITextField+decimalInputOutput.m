@@ -6,22 +6,16 @@
 //  Copyright (c) 2014 Ryan J Dobrynski. All rights reserved.
 //
 
+
 #import "UITextField+decimalInputOutput.h"
 
+
 @implementation UITextField (decimalInputOutput)
-
-
-
-
 
 // returns contents of UITextField.text as NSDecimalNumber
 - (NSDecimalNumber *)decimalNumberFromUserInput;
 {
     return [[NSDecimalNumber alloc] initWithString:self.text];
 }
-
-
-
-
 
 @end

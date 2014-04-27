@@ -90,13 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94344A3B18A71CFB000D437A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		946E351A18959AB20005A6D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +154,6 @@
 		94D597211887792F009DAC13 /* Metric Conversion */ = {
 			isa = PBXGroup;
 			children = (
-				94344A3B18A71CFB000D437A /* Models */,
 				946E351A18959AB20005A6D6 /* Views */,
 				947F4C21188D154F0084481C /* Categories */,
 				94C3C0C3188A5AA0001563E1 /* Controllers */,
@@ -247,7 +239,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RJD;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ryan J Dobrynski";
 				TargetAttributes = {
 					94D597321887792F009DAC13 = {
@@ -351,7 +343,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -390,7 +381,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -452,7 +442,6 @@
 		94D597481887792F009DAC13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Metric Conversion.app/Metric Conversion";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -475,7 +464,6 @@
 		94D597491887792F009DAC13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Metric Conversion.app/Metric Conversion";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
